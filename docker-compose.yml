@@ -1,0 +1,32 @@
+# Portainer: Stacks > Add stack > Repository. Set the env vars from .env.example.
+services:
+  recipes-mcp:
+    build: .
+    image: recipes-mcp:local
+    restart: unless-stopped
+    environment:
+      MCP_PATH_TOKEN: ${MCP_PATH_TOKEN:?set MCP_PATH_TOKEN}
+      SEARXNG_URL: http://searxng:8081
+      PUBLIC_HOST: ${PUBLIC_HOST:-recipesmcp.com}
+      LOG_LEVEL: ${LOG_LEVEL:-INFO}
+    depends_on:
+      - searxng
+    networks:
+      - internal
+      - npm
+
+  searxng:
+    build: ./searxng
+    image: recipes-searxng:local
+    restart: unless-stopped
+    environment:
+      SEARXNG_SECRET: ${SEARXNG_SECRET:?set SEARXNG_SECRET}
+      SEARXNG_PORT: "8081"
+    networks:
+      - internal
+
+networks:
+  internal:
+  npm:
+    name: ${NPM_NETWORK:-npm_default}
+    external: true

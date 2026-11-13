@@ -1,0 +1,19 @@
+use_default_settings:
+  engines:
+    keep_only:
+      - google
+      - bing
+      - duckduckgo
+      - brave
+      - startpage
+
+search:
+  formats:
+    - html
+    - json
+
+server:
+  # Internal-only service; the secret comes from the SEARXNG_SECRET env var.
+  port: 8081
+  limiter: false
+  public_instance: false

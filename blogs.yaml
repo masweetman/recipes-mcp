@@ -1,0 +1,21 @@
+# search: auto (probe WordPress REST, else SearXNG) | wordpress | blogger | searxng
+blogs:
+  - { name: Tastes Better From Scratch, domain: tastesbetterfromscratch.com, search: auto }
+  - { name: Smitten Kitchen, domain: smittenkitchen.com, search: auto }
+  - { name: Food Wishes, domain: foodwishes.blogspot.com, search: blogger }
+  - { name: The Woks of Life, domain: thewoksoflife.com, search: auto }
+  - { name: Simple Home Edit, domain: simplehomeedit.com, search: auto }
+  - { name: The Kitchn, domain: thekitchn.com, search: searxng }
+  - { name: BBC Good Food, domain: bbcgoodfood.com, search: searxng }
+  - { name: RecipeTin Eats, domain: recipetineats.com, search: auto }
+  - { name: Serious Eats, domain: seriouseats.com, search: searxng }
+  - { name: Brian Lagerstrom, domain: brianlagerstrom.com, search: auto }
+  - { name: Love and Lemons, domain: loveandlemons.com, search: auto }
+  - { name: Epicurious, domain: epicurious.com, search: searxng }
+  - { name: Budget Bytes, domain: budgetbytes.com, search: auto }
+  - { name: Sally's Baking Addiction, domain: sallysbakingaddiction.com, search: auto }
+  - { name: Spend With Pennies, domain: spendwithpennies.com, search: auto }
+  - { name: Cookie and Kate, domain: cookieandkate.com, search: auto }
+  - { name: The Mediterranean Dish, domain: themediterraneandish.com, search: auto }
+  - { name: Dinner at the Zoo, domain: dinneratthezoo.com, search: auto }
+  - { name: NYT Cooking, domain: cooking.nytimes.com, search: searxng }
